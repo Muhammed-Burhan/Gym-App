@@ -5,8 +5,10 @@ import { Box, Stack, Button, TextField, Typography } from "@mui/material";
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  const handleSearch = async (e) => {
+    if (search) {
+      // const exercises=await fetchData()
+    }
   };
 
   return (
