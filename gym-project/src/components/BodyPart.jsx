@@ -4,6 +4,10 @@ import Icon from "../assets/icons/gym.png";
 const BodyPart = ({ item, bodyPart, setBodyPart }) => {
   return (
     <Stack
+      onClick={() => {
+        setBodyPart(item);
+        window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
+      }}
       type="button"
       justifyContent={"center"}
       alignItems={"center"}
@@ -21,9 +25,16 @@ const BodyPart = ({ item, bodyPart, setBodyPart }) => {
       <img
         src={Icon}
         alt="gym icon img"
-        style={{ width: "120px", height: "120px" }}
+        style={{ width: "60px", height: "60px" }}
       />
-      {item}
+      <Typography
+        fontSize={"24px"}
+        fontWeight={"bold"}
+        color={"#3A1212"}
+        textTransform={"capitalize"}
+      >
+        {item}
+      </Typography>
     </Stack>
   );
 };
